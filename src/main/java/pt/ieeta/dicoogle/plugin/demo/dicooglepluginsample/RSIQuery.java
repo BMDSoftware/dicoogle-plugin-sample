@@ -30,12 +30,13 @@ import org.slf4j.LoggerFactory;
 import pt.ua.dicoogle.sdk.QueryInterface;
 import pt.ua.dicoogle.sdk.datastructs.SearchResult;
 import pt.ua.dicoogle.sdk.settings.ConfigurationHolder;
+import pt.ua.dicoogle.sdk.utils.QueryException;
 
 /** Example of a query provider.
  *
- * @author Luís A. Bastião Silva - <bastiao@ua.pt>
+ * @author Luís A. Bastião Silva - <bastiao@bmd-software.com>
  */
-public class RSIQuery implements QueryInterface {
+public class RSIQuery implements  QueryInterface {
     private static final Logger logger = LoggerFactory.getLogger(RSIQuery.class);
 
     private boolean enabled;
@@ -78,6 +79,7 @@ public class RSIQuery implements QueryInterface {
         
         return results;
     }
+
 
     @Override
     public String getName() {
